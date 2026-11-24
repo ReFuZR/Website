@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apex Auto Care | Professional Auto Detailing</title>
+  <meta name="description" content="Apex Auto Care — premium auto detailing, paint correction and ceramic coating. Owned and operated by Cody Montgomery." />
+  <meta name="theme-color" content="#0b0d10" />
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a href="#top" class="logo" aria-label="Apex Auto Care home">
+        <img src="assets/logo.svg" alt="" width="34" height="34" />
+        <span>APEX <em>AUTO CARE</em></span>
+      </a>
+      <nav class="nav__links" id="navLinks" aria-label="Main">
+        <a href="#packages">Packages</a>
+        <a href="#addons">Add-Ons</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#faq">FAQ</a>
+        <a href="#book" class="btn btn--sm">Book Now</a>
+      </nav>
+      <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <p class="eyebrow">Premium Auto Detailing</p>
+        <h1>Reach the <span class="accent">peak</span> of clean.</h1>
+        <p class="hero__sub">Showroom-level detailing, paint correction and ceramic protection — done right, every time. Your vehicle, at its absolute best.</p>
+        <div class="hero__cta">
+          <a href="#book" class="btn">Book Your Detail</a>
+          <a href="#packages" class="btn btn--ghost">View Packages</a>
+        </div>
+        <ul class="hero__stats">
+          <li><strong>100%</strong><span>Satisfaction focused</span></li>
+          <li><strong>Pro-grade</strong><span>Products &amp; tools</span></li>
+          <li><strong>Owner</strong><span>On every job</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== PACKAGES ===== -->
+    <section class="section" id="packages">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Packages</p>
+          <h2>Choose your level</h2>
+          <p>Every package is tailored to your vehicle's size and condition. Pricing varies for SUVs, trucks and heavily soiled vehicles.</p>
+        </div>
+
+        <div class="cards">
+          <!-- Exterior -->
+          <article class="card">
+            <h3>Exterior Refresh</h3>
+            <p class="card__desc">A deep, safe wash that brings back the shine.</p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <ul class="checks">
+              <li>Foam pre-wash &amp; hand wash</li>
+              <li>Wheels, tires &amp; wheel wells cleaned</li>
+              <li>Bug &amp; tar removal</li>
+              <li>Tire shine</li>
+              <li>Exterior glass cleaned</li>
+              <li>Spray sealant (1–2 months protection)</li>
+            </ul>
+            <a href="#book" class="btn btn--ghost btn--block" data-package="Exterior Refresh">Select</a>
+          </article>
+
+          <!-- Interior -->
+          <article class="card">
+            <h3>Interior Revive</h3>
+            <p class="card__desc">A clean, fresh cabin from top to bottom.</p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <ul class="checks">
+              <li>Thorough vacuum incl. trunk</li>
+              <li>Dash, console &amp; door panels wiped and protected</li>
+              <li>Vents, cupholders &amp; crevices detailed</li>
+              <li>Carpet &amp; mat shampoo</li>
+              <li>Leather or cloth seat cleaning</li>
+              <li>Interior glass streak-free</li>
+            </ul>
+            <a href="#book" class="btn btn--ghost btn--block" data-package="Interior Revive">Select</a>
+          </article>
+
+          <!-- Full Detail (featured) -->
+          <article class="card card--featured">
+            <span class="badge">Most Popular</span>
+            <h3>Apex Full Detail</h3>
+            <p class="card__desc">The complete inside-and-out treatment.</p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <ul class="checks">
+              <li><strong>Everything in Exterior Refresh</strong></li>
+              <li><strong>Everything in Interior Revive</strong></li>
+              <li>Clay bar decontamination</li>
+              <li>Hand-applied wax or sealant (3–6 months)</li>
+              <li>Door jambs cleaned</li>
+              <li>Leather conditioning</li>
+            </ul>
+            <a href="#book" class="btn btn--block" data-package="Apex Full Detail">Select</a>
+          </article>
+
+          <!-- Paint Correction -->
+          <article class="card">
+            <h3>Paint Correction</h3>
+            <p class="card__desc">Removes swirls, scratches &amp; oxidation for a mirror finish.</p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <ul class="checks">
+              <li>Full decon wash &amp; clay bar</li>
+              <li>Paint depth inspection</li>
+              <li>1-step enhancement or multi-stage correction</li>
+              <li>Removes up to 60–90% of swirls &amp; light scratches</li>
+              <li>Paint sealant protection</li>
+            </ul>
+            <a href="#book" class="btn btn--ghost btn--block" data-package="Paint Correction">Select</a>
+          </article>
+
+          <!-- Ceramic -->
+          <article class="card">
+            <h3>Ceramic Coating</h3>
+            <p class="card__desc">Long-term protection with insane gloss &amp; water beading.</p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <ul class="checks">
+              <li>Paint enhancement polish included</li>
+              <li>Professional-grade ceramic coating</li>
+              <li>1, 3 or 5-year protection options</li>
+              <li>UV, chemical &amp; contaminant resistance</li>
+              <li>Easier washing, lasting shine</li>
+            </ul>
+            <a href="#book" class="btn btn--ghost btn--block" data-package="Ceramic Coating">Select</a>
+          </article>
+
+          <!-- Maintenance -->
+          <article class="card">
+            <h3>Maintenance Plan</h3>
+            <p class="card__desc">Keep it Apex-clean year-round.</p>
+            <p class="price"><span class="price__from">Per visit</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <ul class="checks">
+              <li>Bi-weekly or monthly visits</li>
+              <li>Exterior wash + interior tidy</li>
+              <li>Sealant top-up</li>
+              <li>Priority scheduling</li>
+              <li>Members-only add-on discounts</li>
+            </ul>
+            <a href="#book" class="btn btn--ghost btn--block" data-package="Maintenance Plan">Select</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ADD-ONS ===== -->
+    <section class="section section--alt" id="addons">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Add-Ons</p>
+          <h2>Customize your detail</h2>
+        </div>
+        <div class="addons">
+          <div class="addon"><span>Pet hair removal</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Engine bay cleaning</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Headlight restoration</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Odor elimination / ozone</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Seat &amp; carpet extraction</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Trim restoration</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Glass water-repellent coating</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Wheel &amp; caliper ceramic</span><span class="price__amt"><!-- PRICE --></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROCESS ===== -->
+    <section class="section" id="process">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">How It Works</p>
+          <h2>Simple from start to shine</h2>
+        </div>
+        <ol class="steps">
+          <li><span class="steps__num">01</span><h3>Book</h3><p>Pick your package and a time that works for you.</p></li>
+          <li><span class="steps__num">02</span><h3>Inspect</h3><p>We walk around your vehicle and confirm exactly what it needs.</p></li>
+          <li><span class="steps__num">03</span><h3>Detail</h3><p>Meticulous work with professional products and techniques.</p></li>
+          <li><span class="steps__num">04</span><h3>Enjoy</h3><p>Final walkthrough together — you leave only when it's perfect.</p></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== GALLERY ===== -->
+    <section class="section section--alt" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Our Work</p>
+          <h2>Results that speak</h2>
+          <p>Before &amp; after photos coming soon.</p>
+        </div>
+        <!-- Replace each .gallery__item with <img src="assets/photo.jpg" alt="..."> -->
+        <div class="gallery">
+          <div class="gallery__item"><span>Before / After</span></div>
+          <div class="gallery__item"><span>Paint Correction</span></div>
+          <div class="gallery__item"><span>Interior</span></div>
+          <div class="gallery__item"><span>Ceramic Coating</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about__img" aria-hidden="true">
+          <img src="assets/logo.svg" alt="" />
+        </div>
+        <div>
+          <p class="eyebrow">About</p>
+          <h2>Built on detail. Driven by pride.</h2>
+          <p>Hi, I'm <strong>Cody Montgomery</strong>, owner of Apex Auto Care. I started detailing because I love seeing a vehicle transform — and seeing the look on an owner's face when they get it back.</p>
+          <p>Every car gets my full attention, the right products, and the patience to do the job properly. No shortcuts, no rushed work — just results you can see and feel.</p>
+          <a href="#book" class="btn">Work With Me</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions</h2>
+        </div>
+        <details>
+          <summary>How long does a detail take?</summary>
+          <p>Most exterior or interior packages take 1–3 hours. A full detail typically takes 3–5 hours, and paint correction or ceramic coating can take a full day or more.</p>
+        </details>
+        <details>
+          <summary>Do I need to provide water or power?</summary>
+          <p>Let us know your setup when booking and we'll confirm what's needed for your location.</p>
+        </details>
+        <details>
+          <summary>Why does price vary by vehicle?</summary>
+          <p>Larger vehicles and those with heavy dirt, pet hair, or stains take more time and product. We'll always confirm the price before starting.</p>
+        </details>
+        <details>
+          <summary>How long does ceramic coating last?</summary>
+          <p>Depending on the coating chosen and how it's maintained, 1 to 5+ years.</p>
+        </details>
+        <details>
+          <summary>What forms of payment do you accept?</summary>
+          <p>Cash, card and common payment apps. Payment is due when the job is complete.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- ===== BOOK / CONTACT ===== -->
+    <section class="section" id="book">
+      <div class="container book">
+        <div>
+          <p class="eyebrow">Book Now</p>
+          <h2>Ready to reach the Apex?</h2>
+          <p>Send a request and I'll get back to you to confirm your time and price.</p>
+          <ul class="contact">
+            <!-- TODO: replace placeholders with real info -->
+            <li><span>Phone</span><a href="tel:+10000000000">(000) 000-0000</a></li>
+            <li><span>Email</span><a href="mailto:info@apexautocare.com">info@apexautocare.com</a></li>
+            <li><span>Hours</span>Mon–Sat · 8am–6pm</li>
+          </ul>
+        </div>
+
+        <!-- TODO: connect to a form service (e.g. Formspree) by setting action="..." -->
+        <form class="form" id="bookForm" novalidate>
+          <div class="form__row">
+            <label>Name<input type="text" name="name" required autocomplete="name" /></label>
+            <label>Phone<input type="tel" name="phone" required autocomplete="tel" /></label>
+          </div>
+          <label>Email<input type="email" name="email" autocomplete="email" /></label>
+          <div class="form__row">
+            <label>Vehicle (year / make / model)<input type="text" name="vehicle" required /></label>
+            <label>Package
+              <select name="package" id="packageSelect">
+                <option>Exterior Refresh</option>
+                <option>Interior Revive</option>
+                <option selected>Apex Full Detail</option>
+                <option>Paint Correction</option>
+                <option>Ceramic Coating</option>
+                <option>Maintenance Plan</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+          </div>
+          <label>Preferred date<input type="date" name="date" /></label>
+          <label>Notes<textarea name="notes" rows="3" placeholder="Pet hair, stains, add-ons…"></textarea></label>
+          <button type="submit" class="btn btn--block">Request Appointment</button>
+          <p class="form__msg" id="formMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo">
+        <img src="assets/logo.svg" alt="" width="28" height="28" />
+        <span>APEX <em>AUTO CARE</em></span>
+      </a>
+      <p>&copy; <span id="year"></span> Apex Auto Care · Owned by Cody Montgomery</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

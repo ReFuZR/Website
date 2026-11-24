@@ -1,0 +1,58 @@
+// Nav: shadow on scroll
+const nav = document.getElementById("nav");
+const onScroll = () => nav.classList.toggle("is-scrolled", window.scrollY > 20);
+onScroll();
+window.addEventListener("scroll", onScroll, { passive: true });
+
+// Mobile menu
+const toggle = document.getElementById("navToggle");
+const links = document.getElementById("navLinks");
+const setMenu = (open) => {
+  links.classList.toggle("is-open", open);
+  nav.classList.toggle("menu-open", open);
+  toggle.setAttribute("aria-expanded", String(open));
+  toggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+};
+toggle.addEventListener("click", () => setMenu(!links.classList.contains("is-open")));
+links.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setMenu(false)));
+
+// "Select" on a package pre-fills the booking form
+const select = document.getElementById("packageSelect");
+document.querySelectorAll("[data-package]").forEach((btn) =>
+  btn.addEventListener("click", () => { select.value = btn.dataset.package; })
+);
+
+// Scroll reveal
+const revealEls = document.querySelectorAll(".section__head, .card, .addon, .steps li, .gallery__item, .about > *, details, .book > *");
+revealEls.forEach((el) => el.classList.add("reveal"));
+if ("IntersectionObserver" in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e) => {
+      if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach((el) => io.observe(el));
+} else {
+  revealEls.forEach((el) => el.classList.add("is-visible"));
+}
+
+// Booking form (front-end only until a form service is connected)
+const form = document.getElementById("bookForm");
+const msg = document.getElementById("formMsg");
+form.addEventListener("submit", (e) => {
+  const required = form.querySelectorAll("[required]");
+  let ok = true;
+  required.forEach((f) => {
+    const bad = !f.value.trim();
+    f.classList.toggle("invalid", bad);
+    if (bad) ok = false;
+  });
+  if (!form.getAttribute("action")) e.preventDefault();
+  if (!ok) { e.preventDefault(); msg.textContent = "Please fill in your name, phone and vehicle."; return; }
+  if (!form.getAttribute("action")) {
+    msg.textContent = "Thanks! Your request was received — I'll be in touch soon.";
+    form.reset();
+  }
+});
+
+document.getElementById("year").textContent = new Date().getFullYear();
