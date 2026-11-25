@@ -233,6 +233,7 @@ details p { color: var(--muted); margin: .75rem 0 0; }
 }
 .form input:focus, .form select:focus, .form textarea:focus { outline: none; border-color: var(--accent); }
 .form input.invalid { border-color: #ff5a6e; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
 .form__msg { margin: 0; font-size: .9rem; color: var(--accent); min-height: 1.2em; }
 
 /* ===== Footer ===== */

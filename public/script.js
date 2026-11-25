@@ -40,6 +40,8 @@ if ("IntersectionObserver" in window) {
 const form = document.getElementById("bookForm");
 const msg = document.getElementById("formMsg");
 form.addEventListener("submit", (e) => {
+  // Bot filled the hidden honeypot field: silently drop the submission
+  if (form.querySelector('[name="_gotcha"]').value) { e.preventDefault(); form.reset(); return; }
   const required = form.querySelectorAll("[required]");
   let ok = true;
   required.forEach((f) => {

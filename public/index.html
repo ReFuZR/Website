@@ -6,6 +6,7 @@
   <title>Apex Auto Care | Auto Detailing in Harrisonburg, VA</title>
   <meta name="description" content="Apex Auto Care — auto detailing, paint correction and ceramic coating in Harrisonburg, VA and Rockingham County. Owned and operated by Cody Montgomery. Call or text (681) 297-7706." />
   <meta name="theme-color" content="#0b0d10" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
   <link rel="icon" href="assets/logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -415,12 +416,12 @@
         <!-- TODO: connect to a form service (e.g. Formspree) by setting action="..." -->
         <form class="form" id="bookForm" novalidate>
           <div class="form__row">
-            <label>Name<input type="text" name="name" required autocomplete="name" /></label>
-            <label>Phone<input type="tel" name="phone" required autocomplete="tel" /></label>
+            <label>Name<input type="text" name="name" required maxlength="80" autocomplete="name" /></label>
+            <label>Phone<input type="tel" name="phone" required maxlength="20" pattern="[0-9 \(\)\.\+\-]{7,20}" autocomplete="tel" /></label>
           </div>
-          <label>Email<input type="email" name="email" autocomplete="email" /></label>
+          <label>Email<input type="email" name="email" maxlength="120" autocomplete="email" /></label>
           <div class="form__row">
-            <label>Vehicle (year / make / model)<input type="text" name="vehicle" required /></label>
+            <label>Vehicle (year / make / model)<input type="text" name="vehicle" required maxlength="80" /></label>
             <label>Package
               <select name="package" id="packageSelect">
                 <option>Exterior Refresh</option>
@@ -449,7 +450,7 @@
             </label>
           </div>
           <div class="form__row">
-            <label>Referred by (optional)<input type="text" name="referred_by" placeholder="Friend's name" /></label>
+            <label>Referred by (optional)<input type="text" name="referred_by" maxlength="80" placeholder="Friend's name" /></label>
             <label>How did you hear about us?
               <select name="source">
                 <option value="">Select…</option>
@@ -465,7 +466,9 @@
               </select>
             </label>
           </div>
-          <label>Notes<textarea name="notes" rows="3" placeholder="Pet hair, stains, add-ons…"></textarea></label>
+          <label>Notes<textarea name="notes" rows="3" maxlength="1000" placeholder="Pet hair, stains, add-ons…"></textarea></label>
+          <!-- Spam honeypot: hidden from people, bots fill it in. "_gotcha" is the field name Formspree checks. -->
+          <div class="hp" aria-hidden="true"><label>Leave blank<input type="text" name="_gotcha" tabindex="-1" autocomplete="off" /></label></div>
           <button type="submit" class="btn btn--block">Request Appointment</button>
           <p class="form__msg" id="formMsg" role="status"></p>
         </form>

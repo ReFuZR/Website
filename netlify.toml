@@ -1,0 +1,3 @@
+# Only the public/ folder is published. CLAUDE.md, print/ and other private files are never served.
+[build]
+  publish = "public"
