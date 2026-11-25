@@ -5,7 +5,7 @@ Read this first in any new chat. Keep it short; log only important decisions.
 ## Business
 - Owner: **Cody Montgomery** (solo operator). Auto detailing business.
 - Old name "Duo Shine" retired (parent left the business). New name: **Apex Auto Care** — chosen because it's expandable (more staff, services like tint/PPF/boats, multiple locations).
-- Phone: **(681) 297-7706** (call or text; on site + print). Email: Cody creating a new one — site still has placeholder info@apexautocare.com. Location/hours/service area not provided yet.
+- Phone: **(681) 297-7706** (call or text; on site + print). Email: Cody creating a new one — site still has placeholder info@apexautocare.com. Location: **Harrisonburg, VA** — service area listed as Harrisonburg & Rockingham County (on site, card, flyer; LocalBusiness schema in `<head>` for Google). Hours not confirmed (site shows Mon–Sat 8–6 placeholder).
 
 ## Website
 - Static site: `index.html`, `styles.css`, `script.js`, `assets/logo.svg`. No build step.
@@ -23,7 +23,8 @@ Read this first in any new chat. Keep it short; log only important decisions.
 - `business-card.html/.pdf` (3.5x2 + 0.125" bleed; front = contact, back = referral "Give $15 Get $15" w/ Referred by line) and `flyer.html/.pdf` (letter, white body, 8 tear-off phone tabs). PNG previews alongside. Edit HTML, re-render PDFs with Playwright.
 
 ## TODO
-- New business email (then add to site; cards/flyer have no email yet), hours, service area.
+- New business email (then add to site; cards/flyer have no email yet), confirm hours.
+- Ideas not yet added: JMU student/staff discount; Google Business Profile.
 - **Before launch:** hook booking form to a service (e.g. Formspree: set `action` on `#bookForm`). Until then it shows "received" but sends nothing.
 - Add real before/after photos to `.gallery`; optional photo of Cody in About.
 - Hosting (e.g. GitHub Pages / Netlify) + domain.
