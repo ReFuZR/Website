@@ -16,6 +16,7 @@
 
   <!-- ===== NAV ===== -->
   <header class="nav" id="nav">
+    <a href="#offers" class="promo">🎉 <strong>Grand Opening:</strong> 20% off your first detail <span class="promo__cta">See offers →</span></a>
     <div class="container nav__inner">
       <a href="#top" class="logo" aria-label="Apex Auto Care home">
         <img src="assets/logo.svg" alt="" width="34" height="34" />
@@ -23,6 +24,7 @@
       </a>
       <nav class="nav__links" id="navLinks" aria-label="Main">
         <a href="#packages">Packages</a>
+        <a href="#offers">Offers</a>
         <a href="#addons">Add-Ons</a>
         <a href="#process">Process</a>
         <a href="#about">About</a>
@@ -45,7 +47,7 @@
         <h1>Reach the <span class="accent">peak</span> of clean.</h1>
         <p class="hero__sub">Showroom-level detailing, paint correction and ceramic protection — done right, every time. Your vehicle, at its absolute best.</p>
         <div class="hero__cta">
-          <a href="#book" class="btn">Book Your Detail</a>
+          <a href="#book" class="btn">Book — 20% Off First Detail</a>
           <a href="#packages" class="btn btn--ghost">View Packages</a>
         </div>
         <ul class="hero__stats">
@@ -62,7 +64,7 @@
         <div class="section__head">
           <p class="eyebrow">Packages</p>
           <h2>Choose your level</h2>
-          <p>Every package is tailored to your vehicle's size and condition. Pricing varies for SUVs, trucks and heavily soiled vehicles.</p>
+          <p>Prices shown are for cars &amp; small SUVs. Large SUVs, trucks &amp; minivans add $20–$40. Heavily soiled vehicles may cost extra — you'll always get the price before I start.</p>
         </div>
 
         <div class="cards">
@@ -70,7 +72,7 @@
           <article class="card">
             <h3>Exterior Refresh</h3>
             <p class="card__desc">A deep, safe wash that brings back the shine.</p>
-            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt">$49</span></p>
             <ul class="checks">
               <li>Foam pre-wash &amp; hand wash</li>
               <li>Wheels, tires &amp; wheel wells cleaned</li>
@@ -86,7 +88,7 @@
           <article class="card">
             <h3>Interior Revive</h3>
             <p class="card__desc">A clean, fresh cabin from top to bottom.</p>
-            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt">$89</span></p>
             <ul class="checks">
               <li>Thorough vacuum incl. trunk</li>
               <li>Dash, console &amp; door panels wiped and protected</li>
@@ -103,7 +105,7 @@
             <span class="badge">Most Popular</span>
             <h3>Apex Full Detail</h3>
             <p class="card__desc">The complete inside-and-out treatment.</p>
-            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt">$149</span></p>
             <ul class="checks">
               <li><strong>Everything in Exterior Refresh</strong></li>
               <li><strong>Everything in Interior Revive</strong></li>
@@ -111,6 +113,7 @@
               <li>Hand-applied wax or sealant (3–6 months)</li>
               <li>Door jambs cleaned</li>
               <li>Leather conditioning</li>
+              <li class="bonus">Launch bonus: free add-on (up to $35 value)</li>
             </ul>
             <a href="#book" class="btn btn--block" data-package="Apex Full Detail">Select</a>
           </article>
@@ -119,12 +122,12 @@
           <article class="card">
             <h3>Paint Correction</h3>
             <p class="card__desc">Removes swirls, scratches &amp; oxidation for a mirror finish.</p>
-            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt">$299</span></p>
             <ul class="checks">
               <li>Full decon wash &amp; clay bar</li>
               <li>Paint depth inspection</li>
-              <li>1-step enhancement or multi-stage correction</li>
-              <li>Removes up to 60–90% of swirls &amp; light scratches</li>
+              <li>1-step machine polish (multi-step on request)</li>
+              <li>Removes most light swirls &amp; restores gloss</li>
               <li>Paint sealant protection</li>
             </ul>
             <a href="#book" class="btn btn--ghost btn--block" data-package="Paint Correction">Select</a>
@@ -134,11 +137,11 @@
           <article class="card">
             <h3>Ceramic Coating</h3>
             <p class="card__desc">Long-term protection with insane gloss &amp; water beading.</p>
-            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <p class="price"><span class="price__from">Starting at</span> <span class="price__amt">$449</span></p>
             <ul class="checks">
               <li>Paint enhancement polish included</li>
               <li>Professional-grade ceramic coating</li>
-              <li>1, 3 or 5-year protection options</li>
+              <li>1-year coating (longer options on request)</li>
               <li>UV, chemical &amp; contaminant resistance</li>
               <li>Easier washing, lasting shine</li>
             </ul>
@@ -149,7 +152,7 @@
           <article class="card">
             <h3>Maintenance Plan</h3>
             <p class="card__desc">Keep it Apex-clean year-round.</p>
-            <p class="price"><span class="price__from">Per visit</span> <span class="price__amt"><!-- PRICE --></span></p>
+            <p class="price"><span class="price__from">Per visit</span> <span class="price__amt">$69</span></p>
             <ul class="checks">
               <li>Bi-weekly or monthly visits</li>
               <li>Exterior wash + interior tidy</li>
@@ -163,28 +166,72 @@
       </div>
     </section>
 
+    <!-- ===== OFFERS ===== -->
+    <section class="section section--alt" id="offers">
+      <div class="container">
+        <div class="section__head">
+          <p class="eyebrow">Offers</p>
+          <h2>Launch specials &amp; rewards</h2>
+          <p>Apex Auto Care is new — and I'm earning every customer. Here's how to save.</p>
+        </div>
+        <div class="offers">
+          <article class="offer offer--hot">
+            <span class="offer__tag">Limited time</span>
+            <h3>20% Off Your First Detail</h3>
+            <p>Grand opening special on any package for first-time customers.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">Full Detail</span>
+            <h3>Free Add-On</h3>
+            <p>Book an Apex Full Detail and pick any add-on up to $35 — free.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">Referrals</span>
+            <h3>Give $15, Get $15</h3>
+            <p>Send a friend my way. They get $15 off, and you get $15 off your next detail. No limit.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">Multi-car</span>
+            <h3>$20 Off Each Extra Vehicle</h3>
+            <p>Get two or more vehicles done on the same visit and save on every extra one.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">Thank you</span>
+            <h3>10% Hometown Hero Discount</h3>
+            <p>For military, veterans, first responders, teachers &amp; healthcare workers.</p>
+          </article>
+          <article class="offer">
+            <span class="offer__tag">Members</span>
+            <h3>First Maintenance Visit 50% Off</h3>
+            <p>Start a bi-weekly or monthly Maintenance Plan and your first visit is half price.</p>
+          </article>
+        </div>
+        <p class="offers__fine">One discount per visit (referral credits can be combined). Mention the offer when booking.</p>
+      </div>
+    </section>
+
     <!-- ===== ADD-ONS ===== -->
-    <section class="section section--alt" id="addons">
+    <section class="section" id="addons">
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">Add-Ons</p>
           <h2>Customize your detail</h2>
         </div>
         <div class="addons">
-          <div class="addon"><span>Pet hair removal</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Engine bay cleaning</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Headlight restoration</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Odor elimination / ozone</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Seat &amp; carpet extraction</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Trim restoration</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Glass water-repellent coating</span><span class="price__amt"><!-- PRICE --></span></div>
-          <div class="addon"><span>Wheel &amp; caliper ceramic</span><span class="price__amt"><!-- PRICE --></span></div>
+          <div class="addon"><span>Pet hair removal</span><span class="price__amt">$25</span></div>
+          <div class="addon"><span>Engine bay cleaning</span><span class="price__amt">$35</span></div>
+          <div class="addon"><span>Headlight restoration</span><span class="price__amt">$49</span></div>
+          <div class="addon"><span>Odor elimination / ozone</span><span class="price__amt">$49</span></div>
+          <div class="addon"><span>Seat &amp; carpet extraction</span><span class="price__amt">$59</span></div>
+          <div class="addon"><span>Trim restoration</span><span class="price__amt">$29</span></div>
+          <div class="addon"><span>Glass water-repellent coating</span><span class="price__amt">$29</span></div>
+          <div class="addon"><span>Wheel &amp; caliper ceramic</span><span class="price__amt">$99</span></div>
         </div>
       </div>
     </section>
 
     <!-- ===== PROCESS ===== -->
-    <section class="section" id="process">
+    <section class="section section--alt" id="process">
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">How It Works</p>
@@ -200,7 +247,7 @@
     </section>
 
     <!-- ===== GALLERY ===== -->
-    <section class="section section--alt" id="gallery">
+    <section class="section" id="gallery">
       <div class="container">
         <div class="section__head">
           <p class="eyebrow">Our Work</p>
@@ -218,7 +265,7 @@
     </section>
 
     <!-- ===== ABOUT ===== -->
-    <section class="section" id="about">
+    <section class="section section--alt" id="about">
       <div class="container about">
         <div class="about__img" aria-hidden="true">
           <img src="assets/logo.svg" alt="" />
@@ -234,7 +281,7 @@
     </section>
 
     <!-- ===== FAQ ===== -->
-    <section class="section section--alt" id="faq">
+    <section class="section" id="faq">
       <div class="container container--narrow">
         <div class="section__head">
           <p class="eyebrow">FAQ</p>
@@ -257,6 +304,10 @@
           <p>Depending on the coating chosen and how it's maintained, 1 to 5+ years.</p>
         </details>
         <details>
+          <summary>How does the referral reward work?</summary>
+          <p>When someone books and puts your name in the "Referred by" box, they get $15 off and you get a $15 credit toward your next detail. Credits stack — refer three friends, save $45.</p>
+        </details>
+        <details>
           <summary>What forms of payment do you accept?</summary>
           <p>Cash, card and common payment apps. Payment is due when the job is complete.</p>
         </details>
@@ -264,7 +315,7 @@
     </section>
 
     <!-- ===== BOOK / CONTACT ===== -->
-    <section class="section" id="book">
+    <section class="section section--alt" id="book">
       <div class="container book">
         <div>
           <p class="eyebrow">Book Now</p>
@@ -299,7 +350,36 @@
               </select>
             </label>
           </div>
-          <label>Preferred date<input type="date" name="date" /></label>
+          <div class="form__row">
+            <label>Preferred date<input type="date" name="date" /></label>
+            <label>Offer
+              <select name="offer">
+                <option>20% off first detail</option>
+                <option>Free add-on (Full Detail)</option>
+                <option>Multi-car discount</option>
+                <option>Hometown Hero 10%</option>
+                <option>Maintenance first visit 50%</option>
+                <option>None</option>
+              </select>
+            </label>
+          </div>
+          <div class="form__row">
+            <label>Referred by (optional)<input type="text" name="referred_by" placeholder="Friend's name" /></label>
+            <label>How did you hear about us?
+              <select name="source">
+                <option value="">Select…</option>
+                <option>Friend / family</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>Google</option>
+                <option>Nextdoor</option>
+                <option>Flyer / business card</option>
+                <option>Saw you working</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
           <label>Notes<textarea name="notes" rows="3" placeholder="Pet hair, stains, add-ons…"></textarea></label>
           <button type="submit" class="btn btn--block">Request Appointment</button>
           <p class="form__msg" id="formMsg" role="status"></p>
