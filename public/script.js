@@ -22,20 +22,6 @@ document.querySelectorAll("[data-package]").forEach((btn) =>
   btn.addEventListener("click", () => { select.value = btn.dataset.package; })
 );
 
-// Scroll reveal
-const revealEls = document.querySelectorAll(".section__head, .card, .addon, .steps li, .gallery__item, .about > *, details, .book > *");
-revealEls.forEach((el) => el.classList.add("reveal"));
-if ("IntersectionObserver" in window) {
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach((e) => {
-      if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
-    });
-  }, { threshold: 0.12 });
-  revealEls.forEach((el) => io.observe(el));
-} else {
-  revealEls.forEach((el) => el.classList.add("is-visible"));
-}
-
 // Booking form (front-end only until a form service is connected)
 const form = document.getElementById("bookForm");
 const msg = document.getElementById("formMsg");
@@ -51,9 +37,9 @@ form.addEventListener("submit", (e) => {
   });
   if (!form.getAttribute("action")) e.preventDefault();
   if (email.value && !email.checkValidity()) { email.classList.add("invalid"); ok = false; }
-  if (!ok) { e.preventDefault(); msg.textContent = "Please fill in your name, phone and vehicle (and a valid email if provided)."; return; }
+  if (!ok) { e.preventDefault(); msg.textContent = "Please add your name, phone number and vehicle (and check your email if you added one)."; return; }
   if (!form.getAttribute("action")) {
-    msg.textContent = "Thanks! Your request was received — I'll be in touch soon.";
+    msg.textContent = "Got it, thanks! I'll text or call you soon to set a time.";
     form.reset();
   }
 });
