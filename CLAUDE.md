@@ -24,3 +24,4 @@ Read this first in any new chat. Keep it short; log only important decisions.
 
 ## Git
 - Repo `refuzr/website`, working branch `ccr-2b8b9624-ek3esh`.
+- Private preview: https://claude.ai/artifact/3qf9iZkyD8K6wmXfu1zTzZ (republish index.html + styles.css, script.js, assets/logo.svg to update). Not public yet.
