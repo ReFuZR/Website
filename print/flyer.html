@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Apex Auto Care – Flyer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* US Letter. White body keeps home-printer ink use low. */
+  @page { size: 8.5in 11in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Inter", sans-serif; color: #0b0d10; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .page { width: 8.5in; height: 11in; position: relative; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+
+  .head { position: relative; background: #0b0d10; color: #fff; padding: 0.5in 0.55in 0.45in; overflow: hidden; }
+  .head::before { content: ""; position: absolute; width: 6in; height: 6in; right: -2.2in; top: -3in;
+    background: radial-gradient(circle, rgba(0,180,255,.4), transparent 62%); }
+  .head::after { content: ""; position: absolute; inset: 0;
+    background: repeating-linear-gradient(115deg, transparent 0 34px, rgba(255,255,255,.03) 34px 35px); }
+  .head > * { position: relative; z-index: 1; }
+  .brand { display: flex; align-items: center; gap: 12px; }
+  .brand img { width: 46px; }
+  .brand div { font-family: "Sora"; font-weight: 800; font-size: 24px; letter-spacing: .08em; line-height: 1; }
+  .brand em { display: block; font-style: normal; font-weight: 600; font-size: 11px; letter-spacing: .34em; color: #8b93a3; margin-top: 4px; }
+  h1 { font-family: "Sora"; font-weight: 800; font-size: 50px; line-height: 1.02; letter-spacing: -.02em; margin-top: 0.35in; }
+  h1 span { background: linear-gradient(90deg, #00b4ff, #7cf0ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .sub { color: #b4bccb; font-size: 15px; margin-top: 10px; max-width: 5.4in; }
+
+  .burst { position: absolute; right: 0.55in; bottom: -0.05in; z-index: 2; width: 1.75in; height: 1.75in; border-radius: 50%;
+    background: linear-gradient(135deg, #00b4ff, #7cf0ff); color: #001018; display: flex; flex-direction: column;
+    align-items: center; justify-content: center; text-align: center; transform: rotate(-8deg); box-shadow: 0 0 0 6px #0b0d10; }
+  .burst small { font-size: 10px; font-weight: 700; letter-spacing: .15em; text-transform: uppercase; }
+  .burst b { font-family: "Sora"; font-size: 40px; line-height: 1; }
+  .burst span { font-size: 11px; font-weight: 600; line-height: 1.2; }
+
+  .body { padding: 0.35in 0.55in 0; flex: 1; }
+  .label { font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: #0090cc; margin-bottom: 8px; }
+  .pkgs { display: grid; grid-template-columns: 1fr 1fr; gap: 0 0.35in; }
+  .pkg { display: flex; justify-content: space-between; align-items: baseline; padding: 8px 0; border-bottom: 1px solid #e3e7ee; font-size: 14px; }
+  .pkg b { font-family: "Sora"; font-size: 16px; }
+  .pkg.feat { font-weight: 700; }
+  .pkg.feat b { color: #0090cc; }
+  .note { font-size: 10px; color: #6b7384; margin-top: 6px; }
+
+  .offers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-top: 0.28in; }
+  .offer { border: 1.5px solid #e3e7ee; border-radius: 12px; padding: 12px; }
+  .offer b { display: block; font-family: "Sora"; font-size: 15px; margin-bottom: 3px; }
+  .offer span { font-size: 11px; color: #555d6d; line-height: 1.35; display: block; }
+
+  .incl { margin-top: 0.3in; }
+  .incl ul { list-style: none; columns: 2; column-gap: 0.35in; }
+  .incl li { font-size: 13px; padding: 4px 0 4px 22px; position: relative; break-inside: avoid; }
+  .incl li::before { content: ""; position: absolute; left: 2px; top: 8px; width: 10px; height: 5px;
+    border-left: 2px solid #0090cc; border-bottom: 2px solid #0090cc; transform: rotate(-45deg); }
+  .cta { margin-top: 0.3in; display: flex; align-items: center; justify-content: space-between; background: #0b0d10; color: #fff; border-radius: 14px; padding: 16px 22px; }
+  .cta small { display: block; font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: #7cf0ff; font-weight: 700; }
+  .cta .phone { font-family: "Sora"; font-weight: 800; font-size: 34px; }
+  .cta .who { text-align: right; font-size: 12px; color: #b4bccb; }
+  .cta .who strong { display: block; color: #fff; font-size: 14px; }
+
+  /* tear-off tabs */
+  .tabs { display: grid; grid-template-columns: repeat(8, 1fr); margin-top: 0.25in; border-top: 2px dashed #9aa2b1; height: 1.55in; }
+  .tab { border-right: 2px dashed #9aa2b1; display: flex; align-items: center; justify-content: center; }
+  .tab:last-child { border-right: 0; }
+  .tab p { transform: rotate(-90deg); white-space: nowrap; text-align: center; font-size: 10px; line-height: 1.25; }
+  .tab b { font-family: "Sora"; font-size: 12px; display: block; }
+</style>
+</head>
+<body>
+  <div class="page">
+    <header class="head">
+      <div class="brand"><img src="../assets/logo.svg" alt="" /><div>APEX<em>AUTO CARE</em></div></div>
+      <h1>Reach the <span>peak</span><br />of clean.</h1>
+      <p class="sub">Professional detailing, paint correction &amp; ceramic coating. Owner-operated — every car done right.</p>
+      <div class="burst"><small>Grand Opening</small><b>20%</b><span>off your<br />first detail</span></div>
+    </header>
+
+    <main class="body">
+      <p class="label">Packages</p>
+      <div class="pkgs">
+        <div class="pkg"><span>Exterior Refresh</span><b>$49</b></div>
+        <div class="pkg"><span>Paint Correction</span><b>$299</b></div>
+        <div class="pkg"><span>Interior Revive</span><b>$89</b></div>
+        <div class="pkg"><span>Ceramic Coating</span><b>$449</b></div>
+        <div class="pkg feat"><span>★ Apex Full Detail</span><b>$149</b></div>
+        <div class="pkg"><span>Maintenance Plan</span><b>$69<small style="font-size:10px;font-family:Inter">/visit</small></b></div>
+      </div>
+      <p class="note">Starting prices for cars &amp; small SUVs. Large SUVs, trucks &amp; vans +$20–$40.</p>
+
+      <div class="offers">
+        <div class="offer"><b>Give $15, Get $15</b><span>Refer a friend — you both save. No limit.</span></div>
+        <div class="offer"><b>Free Add-On</b><span>With any Full Detail (up to $35 value).</span></div>
+        <div class="offer"><b>$20 Off Extra Cars</b><span>Each additional vehicle, same visit.</span></div>
+      </div>
+
+      <div class="incl">
+        <p class="label">★ Apex Full Detail includes</p>
+        <ul>
+          <li>Foam pre-wash &amp; hand wash</li>
+          <li>Full vacuum incl. trunk</li>
+          <li>Wheels, tires &amp; wells cleaned</li>
+          <li>Carpet &amp; mat shampoo</li>
+          <li>Clay bar decontamination</li>
+          <li>Seats cleaned &amp; leather conditioned</li>
+          <li>Hand wax / sealant (3–6 months)</li>
+          <li>Dash, console &amp; vents detailed</li>
+          <li>Door jambs &amp; all glass</li>
+          <li>Tire shine &amp; final walkthrough</li>
+        </ul>
+      </div>
+
+      <div class="cta">
+        <div><small>Call or text to book</small><div class="phone">(681) 297-7706</div></div>
+        <div class="who"><strong>Cody Montgomery</strong>Owner / Detailer<br />10% off for Hometown Heroes</div>
+      </div>
+    </main>
+
+    <div class="tabs">
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+      <div class="tab"><p><b>Apex Auto Care</b>(681) 297-7706<br />20% off 1st detail</p></div>
+    </div>
+  </div>
+</body>
+</html>

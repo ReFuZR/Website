@@ -5,7 +5,7 @@ Read this first in any new chat. Keep it short; log only important decisions.
 ## Business
 - Owner: **Cody Montgomery** (solo operator). Auto detailing business.
 - Old name "Duo Shine" retired (parent left the business). New name: **Apex Auto Care** — chosen because it's expandable (more staff, services like tint/PPF/boats, multiple locations).
-- Location, phone, email, service area: **not provided yet** (placeholders in site).
+- Phone: **(681) 297-7706** (call or text; on site + print). Email: Cody creating a new one — site still has placeholder info@apexautocare.com. Location/hours/service area not provided yet.
 
 ## Website
 - Static site: `index.html`, `styles.css`, `script.js`, `assets/logo.svg`. No build step.
@@ -19,8 +19,11 @@ Read this first in any new chat. Keep it short; log only important decisions.
 - Do NOT offer discounts for Google reviews (violates Google policy).
 - Booking form has Offer, Referred by, and "How did you hear about us" fields (track marketing).
 
+## Print (`print/`)
+- `business-card.html/.pdf` (3.5x2 + 0.125" bleed; front = contact, back = referral "Give $15 Get $15" w/ Referred by line) and `flyer.html/.pdf` (letter, white body, 8 tear-off phone tabs). PNG previews alongside. Edit HTML, re-render PDFs with Playwright.
+
 ## TODO
-- Phone, email, hours, service area.
+- New business email (then add to site; cards/flyer have no email yet), hours, service area.
 - **Before launch:** hook booking form to a service (e.g. Formspree: set `action` on `#bookForm`). Until then it shows "received" but sends nothing.
 - Add real before/after photos to `.gallery`; optional photo of Cody in About.
 - Hosting (e.g. GitHub Pages / Netlify) + domain.

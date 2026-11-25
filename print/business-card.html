@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Apex Auto Care – Business Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet" />
+<style>
+  /* 3.5 x 2 in card + 0.125 in bleed on every side = 3.75 x 2.25 in */
+  @page { size: 3.75in 2.25in; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Inter", sans-serif; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .card {
+    width: 3.75in; height: 2.25in; position: relative; overflow: hidden;
+    background: #0b0d10; color: #e8ecf2; page-break-after: always;
+    padding: 0.27in; /* bleed + safe margin */
+  }
+  .glow { position: absolute; width: 3in; height: 3in; right: -1.3in; top: -1.4in;
+    background: radial-gradient(circle, rgba(0,180,255,.35), transparent 62%); }
+  .stripe { position: absolute; left: 0; right: 0; bottom: 0; height: 0.2in;
+    background: linear-gradient(90deg, #00b4ff, #7cf0ff); }
+  .lines { position: absolute; inset: 0;
+    background: repeating-linear-gradient(115deg, transparent 0 18px, rgba(255,255,255,.025) 18px 19px); }
+  .rel { position: relative; height: 100%; }
+
+  /* FRONT */
+  .front .brand { display: flex; align-items: center; gap: 8px; }
+  .front .brand img { width: 30px; height: 30px; }
+  .front .name { font-family: "Sora"; font-weight: 800; font-size: 15px; letter-spacing: .08em; line-height: 1; }
+  .front .name em { display: block; font-style: normal; font-weight: 600; font-size: 8px; letter-spacing: .32em; color: #8b93a3; margin-top: 3px; }
+  .front .tag { margin-top: 10px; font-size: 7.5px; letter-spacing: .2em; text-transform: uppercase; color: #00b4ff; font-weight: 600; }
+  .front .person { position: absolute; left: 0; bottom: 0.12in; }
+  .front .person strong { display: block; font-family: "Sora"; font-size: 12px; font-weight: 700; }
+  .front .person span { font-size: 7.5px; color: #8b93a3; letter-spacing: .1em; text-transform: uppercase; }
+  .front .contact { position: absolute; right: 0; bottom: 0.12in; text-align: right; }
+  .front .phone { font-family: "Sora"; font-weight: 700; font-size: 13px; color: #fff; }
+  .front .contact small { display: block; font-size: 7px; color: #8b93a3; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 2px; }
+
+  /* BACK */
+  .back { text-align: center; }
+  .back .rel { display: flex; flex-direction: column; align-items: center; justify-content: center; }
+  .back .eyebrow { font-size: 7px; letter-spacing: .25em; text-transform: uppercase; color: #00b4ff; font-weight: 700; }
+  .back h2 { font-family: "Sora"; font-weight: 800; font-size: 19px; line-height: 1.1; margin: 4px 0 3px; }
+  .back h2 span { background: linear-gradient(90deg, #00b4ff, #7cf0ff); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .back p { font-size: 7.5px; color: #8b93a3; }
+  .back .ref { margin-top: 9px; width: 100%; display: flex; align-items: flex-end; gap: 6px; font-size: 7.5px; color: #c9cfd9; }
+  .back .ref b { white-space: nowrap; font-weight: 600; }
+  .back .ref i { flex: 1; border-bottom: 1px solid #4a5263; height: 10px; }
+  .back .services { margin-top: 8px; font-size: 6.5px; color: #8b93a3; letter-spacing: .12em; text-transform: uppercase; }
+</style>
+</head>
+<body>
+
+  <!-- FRONT -->
+  <section class="card front">
+    <div class="lines"></div><div class="glow"></div><div class="stripe"></div>
+    <div class="rel">
+      <div class="brand">
+        <img src="../assets/logo.svg" alt="" />
+        <div class="name">APEX<em>AUTO CARE</em></div>
+      </div>
+      <p class="tag">Premium Auto Detailing</p>
+      <div class="person"><strong>Cody Montgomery</strong><span>Owner / Detailer</span></div>
+      <div class="contact"><small>Call or Text</small><div class="phone">(681) 297-7706</div></div>
+    </div>
+  </section>
+
+  <!-- BACK (doubles as a referral card) -->
+  <section class="card back">
+    <div class="lines"></div><div class="glow"></div><div class="stripe"></div>
+    <div class="rel">
+      <p class="eyebrow">Refer a friend</p>
+      <h2>Give <span>$15</span> · Get <span>$15</span></h2>
+      <p>Hand this card to a friend. They save $15 — you get $15 off your next detail.</p>
+      <div class="ref"><b>Referred by:</b><i></i></div>
+      <p class="services">Detailing · Paint Correction · Ceramic Coating</p>
+    </div>
+  </section>
+
+</body>
+</html>
