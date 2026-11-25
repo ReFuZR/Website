@@ -43,16 +43,27 @@ form.addEventListener("submit", (e) => {
   const required = form.querySelectorAll("[required]");
   let ok = true;
   required.forEach((f) => {
-    const bad = !f.value.trim();
+    const bad = !f.value.trim() || !f.checkValidity();
     f.classList.toggle("invalid", bad);
     if (bad) ok = false;
   });
   if (!form.getAttribute("action")) e.preventDefault();
-  if (!ok) { e.preventDefault(); msg.textContent = "Please fill in your name, phone and vehicle."; return; }
+  if (email.value && !email.checkValidity()) { email.classList.add("invalid"); ok = false; }
+  if (!ok) { e.preventDefault(); msg.textContent = "Please fill in your name, phone and vehicle (and a valid email if provided)."; return; }
   if (!form.getAttribute("action")) {
     msg.textContent = "Thanks! Your request was received — I'll be in touch soon.";
     form.reset();
   }
 });
+
+// Clear error styling as the user types; block past dates
+form.querySelectorAll("input, textarea").forEach((f) =>
+  f.addEventListener("input", () => f.classList.remove("invalid"))
+);
+const email = form.querySelector('[name="email"]');
+email.addEventListener("blur", () => email.classList.toggle("invalid", !!email.value && !email.checkValidity()));
+const t = new Date();
+form.querySelector('[name="date"]').min =
+  `${t.getFullYear()}-${String(t.getMonth() + 1).padStart(2, "0")}-${String(t.getDate()).padStart(2, "0")}`;
 
 document.getElementById("year").textContent = new Date().getFullYear();
